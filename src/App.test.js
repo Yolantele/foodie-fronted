@@ -5,6 +5,7 @@ import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 import chai, { expect } from 'chai';
 import chaiEnzyme from 'chai-enzyme';
+require('./setupTest.js');
 
 chai.use(chaiEnzyme());
 
@@ -14,3 +15,7 @@ it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
 });
+
+it ('can use Sinon syntax', () => {
+  expect(true).to.equal(true);
+})
