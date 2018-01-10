@@ -21,7 +21,7 @@ it ('can use Sinon syntax', () => {
   expect(true).to.equal(true);
 });
 
-it ('has a header with App-header class', () => {
+it ('has a module', () => {
   const mountWrapper = mount(<App />)
-  expect(mountWrapper.contains(<Product name='Pancake' />)).to.equal(true)
+  expect(mountWrapper.length).to.equal(1)
 })
