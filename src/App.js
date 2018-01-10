@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Product from './Product/Product'
+import Products from './components/Products/Products'
 
 class App extends Component {
 
@@ -22,19 +22,15 @@ class App extends Component {
     if (!this.state.productsData) {
       return <p> Loading Products...</p>
     } else {
-      const products = this.state.productsData.map( (product) => {
-        return <Product
-          name={product.name}
-          quantity={product.quantity}
-          price={product.price}
-          date={product.date}
-          key={product.id}
-          />
-      })
+
+      const productsList = <Products
+        products={this.state.productsData}
+      />
+
       return (
         <div className="App">
           <p>Hello</p>
-          {products}
+          {productsList}
         </div>
       );
     }
