@@ -12,7 +12,6 @@ constructor(props){
     productsData: null,
     dairySel: null
   }
-  // this.dairy = this.dairy.bind(this);
 }
 
   componentDidMount(){
