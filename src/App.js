@@ -50,7 +50,6 @@ constructor(props){
       />
 
 
-      // console.log("hasjdhsjak",this.state.dairySel)
       return (
         <div className="App">
           <p>Hello</p>
