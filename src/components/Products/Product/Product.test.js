@@ -2,7 +2,7 @@ import React from 'react';
 import sinon from 'sinon';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
-require('../setupTest.js');
+require('../../../setupTest.js');
 
 import Product from './Product';
 
