@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Products from './components/Products/Products'
+import SearchFilter from './components/Products/search-filter/SearchFilter'
 
 class App extends Component {
 
@@ -27,9 +28,12 @@ class App extends Component {
         products={this.state.productsData}
       />
 
+      const searchFilter = <SearchFilter />
+
       return (
         <div className="App">
           <p>Hello</p>
+          {searchFilter}
           {productsList}
         </div>
       );
