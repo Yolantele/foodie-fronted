@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+// import NavBar from './components/NavBar/NavBar'
 import Products from './components/Products/Products'
 import SearchFilter from './components/Products/search-filter/SearchFilter'
 class App extends Component {

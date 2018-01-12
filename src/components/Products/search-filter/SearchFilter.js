@@ -4,16 +4,18 @@ import './SearchFilter.css';
 const SearchFilter = (props) => {
 
   return (
-    <div className='SearchFilter'>
+    <div className="SearchFilter">
       <h4>Filter Product Search</h4>
       <form>
-        <div class="form-group">
-          <label for="type">By Type</label>
-          <input type="text" class="form-control" name="type" required />
-          <label for="price">By Price</label>
-          <input type="text" class="form-control" name="price" required />
+      <h5>
+        <div className="form-group">
+          <label htmlFor="type">By Type </label>
+          <input type="text" className="form-control" name="type" required />
+          <label htmlFor="price">By Price </label>
+          <input type="text" className="form-control" name="price" required />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-primary">Submit</button>
+        </h5>
       </form>
     </div>
   )
