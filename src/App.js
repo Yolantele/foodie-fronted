@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavBar from './components/NavBar/NavBar'
+// import NavBar from './components/NavBar/NavBar'
 import Products from './components/Products/Products'
 import SearchFilter from './components/Products/search-filter/SearchFilter'
 class App extends Component {
@@ -54,7 +54,6 @@ constructor(props){
       return (
         <div className="App">
           <p>Hello</p>
-          {NavBar}
           {searchFilter}
           <button onClick={() => this.filter('dairy')}>Dairy</button>
           <button onClick={() => this.filter('protein')}>Protein</button>
