@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Products from './components/Products/Products'
-import Category from './components/Products/Category/Category'
 
 class App extends Component {
 
