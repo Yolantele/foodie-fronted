@@ -31,7 +31,7 @@ constructor(props){
         if(product.category === string || string === 'all'){
           this.state.selection.push(product);
         };
-        this.setState({filterSel: this.state.selection, hideList: !this.state.hideList});
+        this.setState({filterSel: this.state.selection, hideList: false});
       });
     } else {
       return <p> No Dairy Products available</p>
@@ -55,13 +55,12 @@ constructor(props){
       return (
         <div className="App">
           <p>Hello</p>
-          <button onClick={() => this.filter('all')}>All</button>
-          <button onClick={() => this.filter('dairy')}>Dairy</button>
-          <button onClick={() => this.filter('protein')}>Protein</button>
           {navBar}
           {searchFilter}
+          <button onClick={() => this.filter('all')}>All</button>
           <button onClick={() => this.filter('dairy')}>Dairy</button>
-          <button onClick={() => this.filter('protein')}>Protein</button><br />
+          <button onClick={() => this.filter('protein')}>Protein</button> <br />
+
 
           <a href="/auth/google">Sign in with Google</a>
           {selectionList}
