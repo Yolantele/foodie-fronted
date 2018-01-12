@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import NavBar from './components/NavBar/NavBar'
+import NavBar from './components/NavBar/NavBar'
 import Products from './components/Products/Products'
 import SearchFilter from './components/Products/search-filter/SearchFilter'
 class App extends Component {
@@ -48,15 +48,16 @@ constructor(props){
       products={this.state.selection}
       />
 
-
+      const navBar = <NavBar />
       const searchFilter = <SearchFilter />
 
       return (
         <div className="App">
-          <p>Hello</p>
-          <button onClick={() => this.filter('dairy')}>Dairy</button>
-          <button onClick={() => this.filter('protein')}>Protein</button>
+          {navBar}
           {searchFilter}
+          <button onClick={() => this.filter('dairy')}>Dairy</button>
+          <button onClick={() => this.filter('protein')}>Protein</button><br />
+
           <a href="/auth/google">Sign in with Google</a>
           {productsList}
           {selectionList}
