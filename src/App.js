@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import NavBar from './components/NavBar/NavBar'
+import NavBar from './components/NavBar/NavBar'
 import Products from './components/Products/Products'
 import SearchFilter from './components/Products/search-filter/SearchFilter'
 import ToggleDisplay from 'react-toggle-display';
@@ -49,7 +49,7 @@ constructor(props){
       products={this.state.selection}
       />
 
-
+      const navBar = <NavBar />
       const searchFilter = <SearchFilter />
 
       return (
@@ -58,7 +58,11 @@ constructor(props){
           <button onClick={() => this.filter('all')}>All</button>
           <button onClick={() => this.filter('dairy')}>Dairy</button>
           <button onClick={() => this.filter('protein')}>Protein</button>
+          {navBar}
           {searchFilter}
+          <button onClick={() => this.filter('dairy')}>Dairy</button>
+          <button onClick={() => this.filter('protein')}>Protein</button><br />
+
           <a href="/auth/google">Sign in with Google</a>
           {selectionList}
           <ToggleDisplay show={this.state.hideList}>
