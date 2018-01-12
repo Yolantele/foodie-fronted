@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Products from './components/Products/Products'
-
+import SearchFilter from './components/Products/search-filter/SearchFilter'
 class App extends Component {
 
 constructor(props){
@@ -48,12 +48,14 @@ constructor(props){
       />
 
 
+      const searchFilter = <SearchFilter />
+
       return (
         <div className="App">
           <p>Hello</p>
           <button onClick={() => this.filter('dairy')}>Dairy</button>
           <button onClick={() => this.filter('protein')}>Protein</button>
-
+          {searchFilter}
           <a href="/auth/google">Sign in with Google</a>
           {productsList}
           {selectionList}
